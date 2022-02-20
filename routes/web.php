@@ -64,16 +64,24 @@ Route::post('/send_notification/{id}', [CompanyController::class,'sendnotificati
 Route::get('edit_cus/{id}',[CompanyController::class,'editcustomer']);
 Route::post('edited_cus/{id}', [CompanyController::class, 'editedcustomer']);
 //delete
-
 Route::get('delete_cus/{id}', [CompanyController::class, 'deletecustomer']);
 
 
 
+
+//admin section
+Route::get('adminindex', [AdminController::class, 'adminHome']);
+Route::get('create_user', [AdminController::class, 'createuser']);
+Route::post('add_user', [AdminController::class, 'adduser']);
+Route::get('edit_user/{id}', [AdminController::class, 'edit']);
+Route::post('edited_user/{id}', [AdminController::class, 'editeduser']);
+Route::get('delete_user/{id}', [AdminController::class, 'delete']);
+Route::get('view_user/{id}', [AdminController::class, 'view']);
+
+
+//sms
 Route::get('/bulk_sms',[CompanyController::class,'bulksms']);
-
-
-
 Route::post('/custom', [CompanyController::class,'sendCustomMessage']);
 Route::get('send_message/{id}',[CompanyController::class,'sendsms']);
-
 Route::post('/bulk_mess',[CompanyController::class,'sendbulksms']);
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

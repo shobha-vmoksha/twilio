@@ -1,19 +1,19 @@
 <!doctype html>
 <html>
 <head>
-   @include('admin.includes.head')
+   @include('dashboard.admin.includes.head')
 </head>
 <body>
  
   
-       @include('admin.includes.header')
+       @include('dashboard.admin.includes.header')
  
   
            @yield('content')
           
  
  
-       @include('admin.includes.footer')
+       @include('dashboard.admin.includes.footer')
  
 </body>
 </html>
