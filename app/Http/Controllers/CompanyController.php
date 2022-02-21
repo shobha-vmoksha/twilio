@@ -54,6 +54,7 @@ class CompanyController extends Controller
         $user_phone_number_model->save();
         $this->sendMessage('User registration successful!!', $request->phone_number);
         return back()->with(['success' => "{$request->phone_number} registered"]);
+        // return redirect()->back()->with('success', 'IT WORKS!');
     }
 
 //send message
@@ -65,10 +66,9 @@ class CompanyController extends Controller
         ]);
         $recipient = $validatedData["phone_number"];
         // iterate over the array of recipients and send a twilio request for each
-       
-            $this->sendMessage($validatedData["body"], $recipient);
-        
+            $this->sendMessage($validatedData["body"], $recipient);     
         return back()->with(['success' => "Messages on their way!"]);
+        
     }
 
     //edit customer
@@ -104,7 +104,7 @@ class CompanyController extends Controller
      //    $customerdata = UsersPhoneNumber::find($id);
           $finduser =UsersPhoneNumber::find($id);
           $finduser->delete();
-          return redirect('index')->with('warning','User Deleted Successfully');
+          return redirect('company/index')->with(['warning' => "{$finduser->phone_number} Deleted Successfully"]);
       
          //dd($customerdata->$id);
          // $customerdata->delete();

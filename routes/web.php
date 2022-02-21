@@ -22,9 +22,9 @@ Route::get('/', function () {
 });
 
 
-// Route::middleware(['middleware'=>'PreventBackHistory'])->group(function () {
-//     Auth::routes();
-// });
+Route::middleware(['middleware'=>'PreventBackHistory'])->group(function () {
+    Auth::routes();
+});
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
@@ -102,7 +102,7 @@ Route::get('/bulk_sms', [CompanyController::class, 'bulksms']);
 Route::post('/custom', [CompanyController::class, 'sendCustomMessage']);
 
 Route::post('/bulk_mess', [CompanyController::class, 'sendbulksms']);
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 // Auth::routes();
 

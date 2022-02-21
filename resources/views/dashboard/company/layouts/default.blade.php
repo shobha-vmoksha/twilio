@@ -7,7 +7,7 @@
  
   
        @include('dashboard.company.includes.header')
- 
+       @include('dashboard.company.flash-message')
   
            @yield('content')
           

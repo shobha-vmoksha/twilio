@@ -8,7 +8,7 @@
         </div>
     </div> -->
 
-    @if (session('success'))
+    <!-- @if (session('success'))
             <div class="alert alert-success">
                 {{ session('success') }}
             </div>
@@ -21,7 +21,7 @@
                     @endforeach
                 </ul>
             </div>
-            @endif
+            @endif -->
     <!--start of form-->
     <div class="row">
         <div class="col-lg-12">
