@@ -95,7 +95,7 @@ class CompanyController extends Controller
        $editedcustomer->phone_number = $request->phone_number;
         // dd($editedcustomer);
          $editedcustomer->save();
-         return redirect('index')->with('success', 'Customer Updated successfully!');
+         return redirect('company/index')->with('success', 'Customer Updated successfully!');
      }
 
      //delete

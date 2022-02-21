@@ -12,7 +12,7 @@
   <div class="row">
     <div class="col-lg-12">
      
-      <form action="{{ url('add_user') }}" method="POST"  >
+      <form action="{{ url('admin/add_user') }}" method="POST"  >
         @csrf
         <div class="form-group mt-4">
           <label for="name"> Name:</label>

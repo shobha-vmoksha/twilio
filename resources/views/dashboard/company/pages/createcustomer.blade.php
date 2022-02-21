@@ -24,7 +24,8 @@
                             Add Phone Number
                         </div>
                         <div class="card-body">
-                            <form method="POST" action="/register" >
+                           
+                            <form action="{{ url('company/register') }}" method="POST"  >
                                 @csrf
                                 <div class="form-group">
                                     <label>Enter Phone Number</label>

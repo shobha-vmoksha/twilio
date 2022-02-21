@@ -11,7 +11,7 @@
   <!--start of form-->
   <div class="row">
     <div class="col-lg-12">
-    <form action="{{ url('edited_user',$data->id) }}" method="POST" enctype="multipart/form-data" >
+    <form action="{{ url('admin/edited_user',$data->id) }}" method="POST" enctype="multipart/form-data" >
         @csrf
         @method('POST')
        

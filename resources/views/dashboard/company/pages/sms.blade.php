@@ -28,7 +28,7 @@
         <div class="card mt-3">
                 <div class="card-header bg-danger text-white text-center">Send Notification to the Customer</div>
                 <div class="card-body">
-            <form action="{{ url('/send_notification',$data->id) }}" method="POST" >
+            <form action="{{ url('company/send_notification',$data->id) }}" method="POST" >
             @csrf
                 <input type="hidden" name="id" value="{{$data['id']}}">
                 <!-- <?php

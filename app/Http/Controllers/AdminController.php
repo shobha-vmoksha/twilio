@@ -56,7 +56,7 @@ class AdminController extends Controller
         $newuser->password=$request->password;
         $newuser->password = Hash::make($request->password);
         $newuser->save();
-        return redirect('adminindex')->with('success', 'New User Added successfully!');
+        return redirect('admin/adminindex')->with('success', 'New User Added successfully!');
         
     }
 
@@ -90,7 +90,7 @@ class AdminController extends Controller
          $editeduser->password = $request->password;
         dd($editeduser->phone_number);
          $editeduser->save();
-         return redirect('adminindex')->with('success', 'Updated successfully!');
+         return redirect('admin/adminindex')->with('success', 'Updated successfully!');
  
         
      }
@@ -112,7 +112,7 @@ class AdminController extends Controller
        $editeduser->email = $request->email;
          $editeduser->password = $request->password;
          $editeduser->save();
-         return redirect('index')->with('success', 'Customer Updated successfully!');
+         return redirect('admin/index')->with('success', 'Customer Updated successfully!');
      }
 
      //delete

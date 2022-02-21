@@ -5,7 +5,7 @@
 
          
         <div class="float-end mt-3">
-            <a  href="{{  url('create_user') }}" class="btn btn-info" >Add New Client</a>
+            <a  href="{{  url('admin/create_user') }}" class="btn btn-info" >Add New Client</a>
         </div>
        
 
@@ -38,8 +38,8 @@
                     <td>{{$user->email}}</td>
                     <td>
                     <!-- <a  href="{{  url('admin/view_user', $user->id) }}" class="btn btn-warning" >View</a> -->
-                    <a  href="{{  url('edit_user', $user->id) }}" class="btn btn-secondary" >Edit</a>
-                    <a  href="{{  url('delete_user', $user->id) }}" class="btn btn-primary" >Delete</a>
+                    <a  href="{{  url('admin/edit_user', $user->id) }}" class="btn btn-secondary" >Edit</a>
+                    <a  href="{{  url('admin/delete_user', $user->id) }}" class="btn btn-primary" >Delete</a>
                    
                 </a>
                     </td>

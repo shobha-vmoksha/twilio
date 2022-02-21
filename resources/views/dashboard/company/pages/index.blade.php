@@ -22,7 +22,7 @@
             <div class="col-md-6"></div>
             <div class="col-md-6">
             <div class="float-right">
-                <a href="{{  url('new_cus') }}" class="btn btn-primary">Add New Customer</a>
+                <a href="{{  url('company/new_cus') }}" class="btn btn-primary">Add New Customer</a>
                 <a href="{{  url('bulk_sms') }}" class="btn btn-warning">send bulk message</a>
             </div>
             </div>
@@ -53,14 +53,14 @@
 
                         <td>{{$user->phone_number}}</td>
                         <td>
-                            <a href="{{  url('edit_cus', $user->id) }}" class="btn btn-secondary">Edit</a>
-                            <a href="{{  url('delete_cus', $user->id) }}" class="btn btn-primary">Delete</a>
+                            <a href="{{  url('company/edit_cus', $user->id) }}" class="btn btn-secondary">Edit</a>
+                            <a href="{{  url('company/delete_cus', $user->id) }}" class="btn btn-primary">Delete</a>
 
                             </a>
                         </td>
                         <td>
                         <!-- <a href="{{  url('/view_message', $user->id) }}" class="btn btn-success">View Message</a> -->
-                            <a href="{{  url('/send_message', $user->id) }}" class="btn btn-success">Send Message</a>
+                            <a href="{{  url('company/send_message', $user->id) }}" class="btn btn-success">Send Message</a>
                         </td>
 
                     </tr>
