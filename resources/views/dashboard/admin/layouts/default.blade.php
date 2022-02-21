@@ -8,7 +8,7 @@
   
        @include('dashboard.admin.includes.header')
  
-  
+       @include('dashboard.admin.flash-message')
            @yield('content')
           
  

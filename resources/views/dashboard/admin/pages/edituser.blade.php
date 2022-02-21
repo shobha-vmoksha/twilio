@@ -13,8 +13,8 @@
     <div class="col-lg-12">
     <form action="{{ url('admin/edited_user',$data->id) }}" method="POST" enctype="multipart/form-data" >
         @csrf
-        @method('POST')
-       
+        <!-- @method('POST')
+        -->
         <input type="hidden" name="id" value="{{$data['id']}}">
         <div class="form-group mt-4">
           <label for="name"> Name:</label>

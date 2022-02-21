@@ -36,9 +36,9 @@ Route::group(['prefix' => 'admin', 'middleware' => ['isAdmin', 'auth', 'PreventB
     Route::get('setting', [AdminController::class, 'setting'])->name('admin.setting');
 
 
-    Route::post('update-profile-info', [AdminController::class, 'updateInfo'])->name('adminUpdateInfo');
-    Route::post('change-profile-picture', [AdminController::class, 'updatePicture'])->name('adminPictureUpdate');
-    Route::post('change-password', [AdminController::class, 'changePassword'])->name('adminChangePassword');
+    // Route::post('update-profile-info', [AdminController::class, 'updateInfo'])->name('adminUpdateInfo');
+    // Route::post('change-profile-picture', [AdminController::class, 'updatePicture'])->name('adminPictureUpdate');
+    // Route::post('change-password', [AdminController::class, 'changePassword'])->name('adminChangePassword');
 
     Route::get('adminindex', [AdminController::class, 'adminHome']);
     Route::get('create_user', [AdminController::class, 'createuser']);
