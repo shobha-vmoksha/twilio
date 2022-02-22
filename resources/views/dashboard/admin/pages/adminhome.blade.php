@@ -5,7 +5,7 @@
 
          
         <div class="float-end mt-3">
-            <a  href="{{  url('admin/create_user') }}" class="btn btn-info" >Add New Client</a>
+            <a  href="{{  url('admin/create_user') }}" class="btn btn-info" >Add New Company</a>
         </div>
        
 

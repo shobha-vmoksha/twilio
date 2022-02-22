@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\CompanyController;
 use Illuminate\Support\Facades\Auth;
+use App\User;  
 
 
 /*
@@ -20,6 +21,7 @@ use Illuminate\Support\Facades\Auth;
 Route::get('/', function () {
     return view('welcome');
 });
+
 
 
 Route::middleware(['middleware'=>'PreventBackHistory'])->group(function () {
@@ -40,7 +42,7 @@ Route::group(['prefix' => 'admin', 'middleware' => ['isAdmin', 'auth', 'PreventB
     // Route::post('change-profile-picture', [AdminController::class, 'updatePicture'])->name('adminPictureUpdate');
     // Route::post('change-password', [AdminController::class, 'changePassword'])->name('adminChangePassword');
 
-    Route::get('adminindex', [AdminController::class, 'adminHome']);
+    Route::get('adminindex', [AdminController::class, 'adminHome'])->name('admin.adminindex');
     Route::get('create_user', [AdminController::class, 'createuser']);
     Route::post('add_user', [AdminController::class, 'adduser']);
     Route::get('edit_user/{id}', [AdminController::class, 'edit']);
@@ -56,7 +58,7 @@ Route::group(['prefix' => 'company', 'middleware' => ['isCompany', 'auth', 'Prev
     Route::get('setting', [CompanyController::class, 'setting'])->name('company.setting');
 
     //company
-    Route::get('/index', [CompanyController::class, 'index']);
+    Route::get('/index', [CompanyController::class, 'index'])->name('company.index');
     Route::get('/new_cus', [CompanyController::class, 'addcustomer']);
     Route::post('/register', [CompanyController::class, 'storePhoneNumber']);
    
